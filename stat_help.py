@@ -8,7 +8,7 @@ def convert_and_multiply(input_string, multiplier):
     processed_elements = []
     for element in elements:
         try:
-            number = float(element.replace(" ", ""))
+            number = float(element.replace(" ", "").replace("\u00A0", ""))
             multiplied_number = number * multiplier
             if multiplied_number.is_integer():
                 multiplied_number = int(multiplied_number)
